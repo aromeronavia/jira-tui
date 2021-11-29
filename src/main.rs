@@ -23,7 +23,7 @@ impl MainScreen {
     Self {}
   }
 
-  pub fn draw_main_layout<B>(self, f: &mut Frame<B>)
+  pub fn draw<B>(self, f: &mut Frame<B>)
   where
     B: Backend,
   {
@@ -67,7 +67,7 @@ fn start_ui() -> Result<(), io::Error> {
   loop {
     terminal.draw(|f| {
       let main_screen = MainScreen::new();
-      main_screen.draw_main_layout(f)
+      main_screen.draw(f)
     })?;
     i = i + 1;
     if i == 1000 {
