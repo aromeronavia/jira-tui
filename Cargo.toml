@@ -14,5 +14,4 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 tui = { version = "0.16.0", features = ["crossterm"], default-features = false }
-tokio = { version = "1", features = ["full"] }
 crossterm = "0.20"
